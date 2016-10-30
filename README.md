@@ -6,4 +6,4 @@ Public specifications, samples and documentation on Appson's identity services.
 > - This repository only hosts the documents for the latest edition
 
 
-If you'd like to use this product in your applications, contact danial [a t s i g n ] appson [d o t ] ir 
+If you'd like to use this product in your applications, contact danial [a t s i g n ] appson [d o t ] ir to get help on how to request an ApplicationID and use it in your applications.
