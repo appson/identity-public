@@ -33,9 +33,9 @@ By the way, we store the following information inside the JWT token:
  - **strength**: The strength of the authentication method. By now, there are two authentication types: weak (for authentication with phone) and trivial (for authentication using SIM information) 
  - **factors**: The factors that we have used to authenticate the user (e.g. sms)
  - **iss**: our server's addres ;)
- - **aud**: your account Id.
+ - **aud**: your application Id.
  - **exp**: expiration date of the token.
- - **nbf**: Actually I don't personally know what this is!
+ - **nbf**: Token is not valid before this date.
 
 ##Good for you but how can I see inside the token?
 Ehm... This is a long story. But fortunately someone has already told the story here:
