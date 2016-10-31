@@ -1,19 +1,36 @@
-# identity-public
+# AppsOn Identity
 Public specifications, samples and documentation on Appson's identity services. 
 
 > **Note:**
 
-> - This repository only hosts the documents for the latest edition
+> - This repository only hosts the documents and samples for the latest edition.
 
 
 If you'd like to use this product in your applications, contact danial [a t s i g n ] appson [d o t ] ir to get help on how to request an ApplicationID and use it in your applications.
 
 # Table of Contents
-1. [How can I authenticate a user using phone number?](#how-can-i-authenticate-a-user-using-phone-number)
+1. [What is Application Id?](#what-is-application-id)
+2. [How should I use the Application Id?](#how-should-i-use-the-application-id)
+3. [How can I authenticate a user using phone number?](#how-can-i-authenticate-a-user-using-phone-number)
 2. [How would I know that the JWT token is sent by you?](#how-would-i-know-that-the-jwt-token-is-sent-by-you)
 3. [What is inside the token?](#what-is-inside-the-token)
-4. [Good for you but how can I see inside the token?](#good-for-you-but-how-can-i-see-inside-the-token)
+4. [How can I see inside the token?](#how-can-i-see-inside-the-token)
 
+##What is Application Id?
+*Application Id* or *App Id* is a piece of string that we issue upon your request to uniquely identify you when calling API methods.
+
+##How should I use the Application Id?
+You must send us your *Application Id* with all API method calls. First of all, request an *Application Id* by sending an email to us if you don't have an *AppId* yet. 
+###AppID in direct API method calls
+If you call the API methods directly and without using *WebSDK* or *Android SDK* then you have to send us the *Application Id* in your HTTP request's header. Header name is `Appson-Identity-App-Id` 
+###AppID in WebSDK
+If you are using WebSDK, the only thing you have to do is to append your *AppID* at the end of *JS* file location.:
+```html
+<script src="https://accounts.appson.ir/libs/js/authentication/v/1?appId=MY_APP_ID">
+```
+Replace your *App ID* with `MY_APP_ID`
+###AppID in Android SDK
+To use Android SDK, define *AppID* in your manifest file with the name `Appson-Identity-App-Id`
 ## How can I authenticate a user using phone number?
 You can authenticate a user using his/her cellphone number (or any phone number supporting carrier SMS') in two ways.
 
@@ -32,13 +49,14 @@ By the way, we store the following information inside the JWT token:
  - **sub**: user's accountID in our system. You may want to have this!
  - **strength**: The strength of the authentication method. By now, there are two authentication types: weak (for authentication with phone) and trivial (for authentication using SIM information) 
  - **factors**: The factors that we have used to authenticate the user (e.g. sms)
- - **iss**: our server's addres ;)
+ - **iss**: our server's addres 
  - **aud**: your application Id.
  - **exp**: expiration date of the token.
  - **nbf**: Token is not valid before this date.
 
-##Good for you but how can I see inside the token?
+##How can I see inside the token?
 Ehm... This is a long story. But fortunately someone has already told the story here:
 https://jwt.io/#libraries-io
+
 
 
