@@ -3,18 +3,33 @@ Public specifications, samples and documentation on Appson's identity services.
 
 > **Note:**
 
-> - This repository only hosts the documents and samples for the latest edition.
+> - Current live version is 0.1.0b . API specification document for V0.1.0 is only provided for introductory purposes.
+
 
 
 If you'd like to use this product in your applications, contact danial [a t s i g n ] appson [d o t ] ir to get help on how to request an ApplicationID and use it in your applications.
 
 # Table of Contents
-1. [What is Application Id?](#what-is-application-id)
+1. [What is AppsOn Identity?](#what-is-appson-identity)
+2. [How can I use AppsOn Identity in  my application?](#how-can-i-use-appson-identity-in-my-application)
+3. [What is Application Id?](#what-is-application-id)
 2. [How should I use the Application Id?](#how-should-i-use-the-application-id)
 3. [How can I authenticate a user using phone number?](#how-can-i-authenticate-a-user-using-phone-number)
 2. [How would I know that the JWT token is sent by you?](#how-would-i-know-that-the-jwt-token-is-sent-by-you)
 3. [What is inside the token?](#what-is-inside-the-token)
 4. [How can I see inside the token?](#how-can-i-see-inside-the-token)
+
+##What is AppsOn Identity?
+**AppsOn Identity** is an integrated authentication solution consisting of a series of APIs and SDKs  to help application developers provide safe and secure authentication to their end users.
+
+##How can I use AppsOn Identity in my application?
+You can use **AppsOn Identity** in two ways.
+
+###Direct API Method calls
+You can use **AppsOn Identity** by directly calling API methods refer to the documentation for more info.
+
+###Using SDKs
+Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
 
 ##What is Application Id?
 *Application Id* or *App Id* is a piece of string that we issue upon your request to uniquely identify you when calling API methods.
@@ -57,6 +72,3 @@ By the way, we store the following information inside the JWT token:
 ##How can I see inside the token?
 Ehm... This is a long story. But fortunately someone has already told the story here:
 https://jwt.io/#libraries-io
-
-
-
