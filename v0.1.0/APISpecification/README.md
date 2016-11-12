@@ -1,2 +1,0 @@
-# API Documentation
-To view API Documentation for Version 0.1.0, please [click here](https://cdn.rawgit.com/appson/identity-public/master/v0.1.0/APISpecification/content/index.html).

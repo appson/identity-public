@@ -3,7 +3,7 @@ Public specifications, samples and documentation on Appson's identity services.
 
 > **Note:**
 
-> - Current live version is 0.1.0b . API specification document for V0.1.0 is only provided for introductory purposes.
+> - Current live version is 0.1.0b . Version 0.2.0 will be live on Sunday November 13. For a successful migration, see the API specification fo v0.2.0
 
 
 
@@ -62,7 +62,7 @@ If you want to know about the internals of a JWT token, refer to https://jwt.io 
 By the way, we store the following information inside the JWT token:
 
  - **sub**: user's accountID in our system. You may want to have this!
- - **strength**: The strength of the authentication method. By now, there are two authentication types: weak (for authentication with phone) and trivial (for authentication using SIM information) 
+ - **strength**: The strength of the authentication method. By now, there are three authentication types: weak (for authentication with phone), trivial (for authentication using SIM information) and fair (for email/password authentication)
  - **factors**: The factors that we have used to authenticate the user (e.g. sms)
  - **iss**: our server's addres 
  - **aud**: your application Id.
