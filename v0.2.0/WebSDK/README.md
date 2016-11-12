@@ -33,12 +33,38 @@ Whenever you need to authenticate a user, you need to request an authentication 
 ```javascript
 appson.login(options, callbackFunc);
 ```
+`callbackFunc` is the name of the callback function in the previous section.
+
 `options` is an object which includes the options to specify popup's behavior. This object may have the following properties:
 
- - phoneNumber
- - defaultAuthMethod
+ - `phoneNumber`: If you know the user's phone number, you can pass it here. 
+ - `defaultAuthMethod` : you can choose between default authentication (user can choose phone or email-based authentication, Phone-only authentication and email-only authentication.
 
 `defaultAuthMethod`  may be one of the following:
 
- - appson.AuthenticationMethod.Email
- - appson.AuthenticationMethod.PhoneNumber
+ - `appson.AuthenticationMethod.Email`
+ - `appson.AuthenticationMethod.PhoneNumber`
+
+Following code snippet shows a variety of ways that `options` may be created.
+```javascript
+//let user choose auth method. Default behaviour
+var options=null;
+				
+//let the user choose authentication method. If user chooses authentication with phone, fill phone texbox with the following
+options={phoneNumber:"+989123456789"  };
+				
+//user can only authenticate with phone number.
+options={defaultAuthMethod: appson.AuthenticationMethod.PhoneNumber };
+				
+//user can only authenticate with phone number. Fill phone number textbox with the given phone number
+options={phoneNumber:"9123456789" , defaultAuthMethod: appson.AuthenticationMethod.PhoneNumber };
+				
+//user can only authenticate with email/pass
+options={defaultAuthMethod: appson.AuthenticationMethod.Email };
+			
+```
+
+Now that you have your callback function and `options` object, you can call login method to open the popup:
+```javascript
+appson.login(options, changeTextBox);
+```
