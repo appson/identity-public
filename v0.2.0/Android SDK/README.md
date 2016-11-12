@@ -1,0 +1,1 @@
+Android SDK is planned to be released by the end of this week (November 16)

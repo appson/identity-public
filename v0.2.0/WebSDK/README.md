@@ -18,7 +18,13 @@ To use WebSDK, you have to import the `js` file to your web page. The address of
 You must replace `MY_APP_ID` with your own `Application Id` . 
 
 ###Callback Function
-Upon a successful authentication, the opened popup is closed and your callback function is called. A sample callback function may be like this:
+Upon a successful authentication, the opened popup is closed and your callback function is called.
+callback function must accept a result object as a single parameter. This object contains the following:
+
+ - success : Indicates if authentication has been successful.
+ - Token: The resulting JWT Token.
+
+ A sample callback function may be like this:
 
 ```javascript
      function changeTextBox(result) {
