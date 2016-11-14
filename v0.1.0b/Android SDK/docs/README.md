@@ -1,1 +1,0 @@
-Download the .aar file from "bin" folder. Refer to the "sample" folder for usage.
