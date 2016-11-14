@@ -3,7 +3,7 @@ Public specifications, samples and documentation on Appson's identity services.
 
 > **Note:**
 
-> - Current live version is 0.1.0b . Version 0.2.0 will be live on Sunday November 13. For a successful migration, see the API specification fo v0.2.0
+> - Current live version is v0.2.0 . 
 
 
 
