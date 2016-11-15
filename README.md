@@ -16,6 +16,7 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 2. [How should I use the Application Id?](#how-should-i-use-the-application-id)
 3. [How can I authenticate a user using phone number?](#how-can-i-authenticate-a-user-using-phone-number)
 2. [How would I know that the JWT token is sent by you?](#how-would-i-know-that-the-jwt-token-is-sent-by-you)
+3. [How can I verify the JWT token with public key?](#how-can-i-verify-the-jwt-token-with-public-key)
 3. [What is inside the token?](#what-is-inside-the-token)
 4. [How can I see inside the token?](#how-can-i-see-inside-the-token)
 
@@ -57,11 +58,58 @@ First, you need to call the `/authentication/phonenumber/start` method (refer to
 ## How would I know that the JWT token is sent by you?
 We have sent you a public key with your *Application Id*. We use the private key to sign the JWT token for you. Your private key is stored in a safe and secure place. Hence, if you could verify the JWT token with your public key, you can be sure that the token is sent by us. 
 
+##How can I verify the JWT token with public key?
+The public key that you receive from us is in `XML` format:
+```XML
+<RSAKeyValue>
+<Modulus>zwmorLy...Mz4Q==</Modulus><
+Exponent>A..B</Exponent>
+</RSAKeyValue>
+```
+Keep in mind that in some platforms, you have to convert this to `PEM` format before validating the token. Refer to utilities introduced in https://jwt.io for your platform.
+
+Here is a sample C# snippet to verify the token with the public key:
+
+```C#
+try {
+	//Replace with your public key in xml format (received from AppsOn Identity)
+	var publicKey = "XML_PUBLIC_KEY";
+
+	//Replace with user's token 
+	var token = "USER_TOKEN";
+
+	var key = new RSACryptoServiceProvider();
+	key.FromXmlString(publicKey);
+	//Replace YOUR_APP_ID with your application ID
+	var validationParameters = new TokenValidationParameters {
+	 IssuerSigningKey = new RsaSecurityKey(key),
+	  ValidAudience = "YOUR_APP_ID",
+	  ValidIssuer = "http://s1identity"
+	};
+
+	var tokenHandler = new JwtSecurityTokenHandler();
+	if (tokenHandler.CanReadToken(token)) {
+	 SecurityToken validatedToken;
+	 //Throws exception if token is not valid
+	 var result = tokenHandler.ValidateToken(token, validationParameters, out validatedToken);
+
+	 //token is valid here
+
+	} else {
+	 //could not read token
+	}
+
+
+} catch (Exception e) {
+	//token invalid
+}
+```
+
 ## What is inside the token?
 If you want to know about the internals of a JWT token, refer to https://jwt.io . 
 By the way, we store the following information inside the JWT token:
 
- - **sub**: user's accountID in our system. You may want to have this!
+ - **sub**: user's accountID in our system. 
  - **strength**: The strength of the authentication method. By now, there are three authentication types: weak (for authentication with phone), trivial (for authentication using SIM information) and fair (for email/password authentication)
  - **factors**: The factors that we have used to authenticate the user (e.g. sms)
  - **iss**: our server's addres 
