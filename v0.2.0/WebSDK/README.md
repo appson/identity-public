@@ -54,7 +54,7 @@ appson.login(options, callbackFunc);
 Following code snippet shows a variety of ways that `options` may be created.
 ```javascript
 //let user choose auth method. Default behaviour
-var options=null;
+var options={};
 				
 //let the user choose authentication method. If user chooses authentication with phone, fill phone texbox with the following
 options={phoneNumber:"+989123456789"  };
