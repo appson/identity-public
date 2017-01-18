@@ -3,7 +3,7 @@ Public specifications, samples and documentation on Appson's identity services.
 
 > **Note:**
 
-> - Current live version is v0.2.0 . 
+> - Current live version is v0.3.5 . 
 
 
 
