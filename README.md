@@ -27,7 +27,7 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 You can use **AppsOn Identity** in two ways.
 
 ###Direct API Method calls
-You can use **AppsOn Identity** by directly calling API methods refer to the documentation for more info.
+You can use **AppsOn Identity** by directly calling API methods refer to the [documentation](https://rawgit.com/appson/identity-public/master/v0.3.5/APISpecification/content/index.htm) for more info.
 
 ###Using SDKs
 Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
