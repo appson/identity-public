@@ -40,26 +40,5 @@ namespace Client.Tests
             var dump = a.Dump();
             Assert.IsTrue(dump.Equals("Address: localhost -- ApplicationId: my-app-id", StringComparison.InvariantCultureIgnoreCase));
         }
-
-        [TestMethod]
-        public void should_reconfigure_endpoint()
-        {
-            var a = Configurator.Configure
-                .WithAddress("localhost")
-                .WithApplicationId("my-app-id")
-                .Build();
-            Assert.IsNotNull(a);
-
-            var dump = a.Dump();
-            Assert.IsTrue(dump.Equals("Address: localhost -- ApplicationId: my-app-id", StringComparison.InvariantCultureIgnoreCase));
-
-            a.Reconfigure
-                .WithAddress("address2")
-                .WithApplicationId("appid2")
-                .Build();
-
-            dump = a.Dump();
-            Assert.IsTrue(dump.Equals("Address: address2 -- ApplicationId: appid2", StringComparison.InvariantCultureIgnoreCase));
-        }
     }
 }
