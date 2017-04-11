@@ -1,25 +1,22 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading.Tasks;
 using Appson.Identity.Client.ClientSections;
-using ServiceStack.Text;
 
 namespace Appson.Identity.Client
 {
     public class IdentityClient
     {
-        protected static readonly HttpClient Http = new HttpClient();
-
         private readonly Configuration _config;
-        public ApplicationSectionClient Application { get; }
+        public ApplicationSection Application { get; }
+        public AuthenticationSection Authentication { get; }
+
         internal IdentityClient(Configuration config)
         {
             _config = config;
-
-            Http.BaseAddress = new Uri(config.Address);
-
-            Http.DefaultRequestHeaders.Add("Appson-Identity-App-Id", config.ApplicationId);
-
-            Application = new ApplicationSectionClient();
+            SectionBase.Configure(config);
+            Application = new ApplicationSection();
+            Authentication = new AuthenticationSection();
         }
 
         internal IdentityClient()

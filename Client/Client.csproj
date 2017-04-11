@@ -76,13 +76,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSections\AuthenticationSection.cs" />
+    <Compile Include="ClientSections\EmailAuthenticationSection.cs" />
+    <Compile Include="ClientSections\PhoneAuthenticationSection.cs" />
+    <Compile Include="ClientSections\SectionBase.cs" />
     <Compile Include="EndpointAddresses.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyInput.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyResponse.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="Configurator.cs" />
-    <Compile Include="ClientSections\ApplicationSectionClient.cs" />
+    <Compile Include="ClientSections\ApplicationSection.cs" />
     <Compile Include="IdentityClient.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationCommitInput.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationSetSimInformationInput.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationSetTelegramIdInput.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationSetSimInformationResponse.cs" />
+    <Compile Include="Model\Authentication\EmailAuthenticationInput.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationStartInput.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationCommitResponse.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationSetTelegramIdResponse.cs" />
+    <Compile Include="Model\Authentication\EmailAuthenticationResponse.cs" />
+    <Compile Include="Model\Authentication\PhoneAuthenticationStartResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
