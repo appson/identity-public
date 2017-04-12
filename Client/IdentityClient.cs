@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Appson.Identity.Client.ClientSections;
+using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client
 {
@@ -14,7 +15,7 @@ namespace Appson.Identity.Client
         internal IdentityClient(Configuration config)
         {
             _config = config;
-            SectionBase.Configure(config);
+            HttpHelper.Configure(config);
             Application = new ApplicationSection();
             Authentication = new AuthenticationSection();
         }

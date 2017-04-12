@@ -79,7 +79,7 @@
     <Compile Include="ClientSections\AuthenticationSection.cs" />
     <Compile Include="ClientSections\EmailAuthenticationSection.cs" />
     <Compile Include="ClientSections\PhoneAuthenticationSection.cs" />
-    <Compile Include="ClientSections\SectionBase.cs" />
+    <Compile Include="Util\HttpHelper.cs" />
     <Compile Include="EndpointAddresses.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyInput.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyResponse.cs" />

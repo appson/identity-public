@@ -1,19 +1,20 @@
 using System;
 using System.Threading.Tasks;
 using Appson.Identity.Client.Model.Authentication;
+using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class PhoneAuthenticationSection : SectionBase
+    public class PhoneAuthenticationSection
     {
         public async Task<PhoneAuthenticationStartResponse> StartAsync(string phoneNumber,
             bool alreadyExists = false)
         {
             try
             {
-                var req = new PhoneAuthenticationStartInput {AlreadyExists = alreadyExists, PhoneNumber = phoneNumber};
+                var req = new PhoneAuthenticationStartInput { AlreadyExists = alreadyExists, PhoneNumber = phoneNumber };
                 var response =
-                    await Post<PhoneAuthenticationStartResponse>(EndpointAddresses.AuthenticationPhoneNumberStart, req);
+                    await HttpHelper.Post<PhoneAuthenticationStartResponse>(EndpointAddresses.AuthenticationPhoneNumberStart, req);
                 return response;
             }
             catch (Exception)
@@ -40,7 +41,7 @@ namespace Appson.Identity.Client.ClientSections
                     VerificationId = verificationId
                 };
                 var response =
-                    await Post<PhoneAuthenticationCommitResponse>(EndpointAddresses.AuthenticationPhoneNumberCommit,
+                    await HttpHelper.Post<PhoneAuthenticationCommitResponse>(EndpointAddresses.AuthenticationPhoneNumberCommit,
                         req);
                 return response;
             }
@@ -70,7 +71,7 @@ namespace Appson.Identity.Client.ClientSections
                 };
 
                 var response = await
-                    Post<PhoneAuthenticationSetTelegramIdResponse>(
+                    HttpHelper.Post<PhoneAuthenticationSetTelegramIdResponse>(
                         EndpointAddresses.AuthenticationAssociateTelegramIdToPhoneNumber, req);
                 return response;
             }
@@ -103,7 +104,7 @@ namespace Appson.Identity.Client.ClientSections
                 };
 
                 var response = await
-                    Post<PhoneAuthenticationSetSimInformationResponse>(
+                    HttpHelper.Post<PhoneAuthenticationSetSimInformationResponse>(
                         EndpointAddresses.AuthenticationAssociateSimInformationToPhoneNumber, req);
                 return response;
             }
