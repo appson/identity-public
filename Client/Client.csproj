@@ -78,7 +78,9 @@
   <ItemGroup>
     <Compile Include="ClientSections\AuthenticationSection.cs" />
     <Compile Include="ClientSections\EmailAuthenticationSection.cs" />
+    <Compile Include="ClientSections\EmailSection.cs" />
     <Compile Include="ClientSections\PhoneAuthenticationSection.cs" />
+    <Compile Include="Model\Email\SendVerificationEmailInput.cs" />
     <Compile Include="Util\HttpHelper.cs" />
     <Compile Include="EndpointAddresses.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyInput.cs" />

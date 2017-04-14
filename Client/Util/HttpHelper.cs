@@ -6,7 +6,7 @@ namespace Appson.Identity.Client.Util
 {
     public static class HttpHelper
     {
-        private static readonly HttpClient Client = new HttpClient();
+        public static readonly HttpClient Client = new HttpClient();
 
         [Obsolete("Try using Configure(string applicationId, string address).",true)]
         public static void Configure(IdentityClientConfiguration config)

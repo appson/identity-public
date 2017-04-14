@@ -8,5 +8,10 @@
         internal const string AuthenticationAssociateTelegramIdToPhoneNumber = "/api/authentication/phonenumber/commit/set/telegramid";
         internal const string AuthenticationAssociateSimInformationToPhoneNumber = "/api/authentication/phonenumber/commit/set/siminformation";
         internal const string AuthenticationEmail = "/api/authentication/email";
+        internal const string EmailSendVerificationEmail = "/api/email/verificationId/Add";
+        internal const string EmailSendResetPasswordEmail = "/api/email/resetpassword/start";
+        internal const string EmailCompleteResetPassword = "/api/email/resetpassword/complete";
+        internal const string EmailVerifyEmailAddress = "/api/email/activate";
+        internal const string EmailChangePassword = "/api/email/changepassword";
     }
 }

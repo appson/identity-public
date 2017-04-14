@@ -12,6 +12,7 @@ namespace Appson.Identity.Client
             HttpHelper.Configure(config.ApplicationId, config.Address);
             Application = new ApplicationSection();
             Authentication = new AuthenticationSection();
+            Email = new EmailSection();
         }
 
         public IdentityClient(string applicationId, string address = "https://accounts.appson.ir")
@@ -21,6 +22,7 @@ namespace Appson.Identity.Client
 
         public ApplicationSection Application { get; }
         public AuthenticationSection Authentication { get; }
+        public EmailSection Email { get; }
         public IdentityClientConfiguration Configuration { get; }
     }
 }
