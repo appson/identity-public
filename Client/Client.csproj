@@ -83,8 +83,7 @@
     <Compile Include="EndpointAddresses.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyInput.cs" />
     <Compile Include="Model\Application\Key\ApplicationKeyResponse.cs" />
-    <Compile Include="Configuration.cs" />
-    <Compile Include="Configurator.cs" />
+    <Compile Include="IdentityClientConfiguration.cs" />
     <Compile Include="ClientSections\ApplicationSection.cs" />
     <Compile Include="IdentityClient.cs" />
     <Compile Include="Model\Authentication\PhoneAuthenticationCommitInput.cs" />

@@ -8,10 +8,23 @@ namespace Appson.Identity.Client.Util
     {
         private static readonly HttpClient Client = new HttpClient();
 
-        public static void Configure(Configuration config)
+        [Obsolete("Try using Configure(string applicationId, string address).",true)]
+        public static void Configure(IdentityClientConfiguration config)
         {
-            Client.BaseAddress = new Uri(config.Address);
-            Client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", config.ApplicationId);
+            Configure(config.ApplicationId,config.Address);
+        }
+
+        public static void Configure(string applicationId, string address)
+        {
+            try
+            {
+                Client.BaseAddress = new Uri(address);
+            }
+            catch (Exception e)
+            {
+                throw new ArgumentException($"{address} is not a valid URI.");
+            }
+            Client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", applicationId);
         }
 
 

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿using System.Net.Http;
 using Appson.Identity.Client.ClientSections;
 using Appson.Identity.Client.Util;
 
@@ -8,25 +6,21 @@ namespace Appson.Identity.Client
 {
     public class IdentityClient
     {
-        private readonly Configuration _config;
-        public ApplicationSection Application { get; }
-        public AuthenticationSection Authentication { get; }
-
-        internal IdentityClient(Configuration config)
+        internal IdentityClient(IdentityClientConfiguration config)
         {
-            _config = config;
-            HttpHelper.Configure(config);
+            Configuration = config;
+            HttpHelper.Configure(config.ApplicationId, config.Address);
             Application = new ApplicationSection();
             Authentication = new AuthenticationSection();
         }
 
-        internal IdentityClient()
+        public IdentityClient(string applicationId, string address = "https://accounts.appson.ir")
+            : this(new IdentityClientConfiguration(applicationId, address))
         {
         }
 
-        public string Dump()
-        {
-            return $"Address: {_config.Address} -- ApplicationId: {_config.ApplicationId}";
-        }
+        public ApplicationSection Application { get; }
+        public AuthenticationSection Authentication { get; }
+        public IdentityClientConfiguration Configuration { get; }
     }
 }

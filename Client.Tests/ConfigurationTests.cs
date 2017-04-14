@@ -8,37 +8,14 @@ namespace Client.Tests
     public class ConfigurationTests
     {
         [TestMethod]
-        public void should_configure_endpoints_address()
-        {
-            var a = Configurator.Configure.WithAddress(() => "localhost");
-            Assert.IsTrue(a.Address.Equals("localhost", StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        [TestMethod]
-        public void should_configure_endpoints_appId()
-        {
-            var a = Configurator.Configure.WithApplicationId(() => "Sample-App-Id");
-            Assert.IsTrue(a.ApplicationId.Equals("Sample-App-Id", StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        [TestMethod]
-        public void should_configure_endpoints_address_and_appId()
-        {
-            var a = Configurator.Configure.WithAddress("localhost").WithApplicationId("my-app-id");
-            Assert.IsTrue(a.Address.Equals("localhost", StringComparison.InvariantCultureIgnoreCase));
-            Assert.IsTrue(a.ApplicationId.Equals("my-app-id", StringComparison.InvariantCultureIgnoreCase));
-        }
-
-        [TestMethod]
         public void should_return_configured_client()
         {
-            var a = Configurator.Configure
-                .WithAddress("localhost")
-                .WithApplicationId("my-app-id")
-                .Build();
+            var a = new IdentityClient("my-app-id", "https://accounts-staging.appson.ir");
+
             Assert.IsNotNull(a);
-            var dump = a.Dump();
-            Assert.IsTrue(dump.Equals("Address: localhost -- ApplicationId: my-app-id", StringComparison.InvariantCultureIgnoreCase));
+
+            Assert.IsTrue(a.Configuration.Address.Equals("https://accounts-staging.appson.ir", StringComparison.InvariantCultureIgnoreCase));
+            Assert.IsTrue(a.Configuration.ApplicationId.Equals("my-app-id", StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

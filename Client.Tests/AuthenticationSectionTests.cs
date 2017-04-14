@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Appson.Identity.Client;
+﻿using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Client.Tests
