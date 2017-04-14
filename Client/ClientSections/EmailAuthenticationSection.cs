@@ -17,7 +17,7 @@ namespace Appson.Identity.Client.ClientSections
                     await HttpHelper.Post<EmailAuthenticationResponse>(EndpointAddresses.AuthenticationEmail, req);
                 return response;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return default(EmailAuthenticationResponse);
             }
