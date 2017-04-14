@@ -16,7 +16,7 @@ namespace Client.Tests
         [TestMethod]
         public async Task should_commit_phone_authentication()
         {
-            var response = await Client.Authentication.WithPhoneNumber.CommitAsync("45105", "09378371112");
+            var response = await Client.Authentication.WithPhoneNumber.CommitAsync("89097", "09378371112");
             Assert.IsFalse(string.IsNullOrEmpty(response.IdToken));
         }
     }
