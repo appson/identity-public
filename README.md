@@ -21,9 +21,11 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 4. [How can I see inside the token?](#how-can-i-see-inside-the-token)
 
 ##What is AppsOn Identity?
+
 **AppsOn Identity** is an integrated authentication solution consisting of a series of APIs and SDKs  to help application developers provide safe and secure authentication to their end users.
 
 ##How can I use AppsOn Identity in my application?
+
 You can use **AppsOn Identity** in two ways.
 
 ###Direct API Method calls
@@ -33,6 +35,7 @@ You can use **AppsOn Identity** by directly calling API methods refer to the [do
 Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
 
 ##What is Application Id?
+
 *Application Id* or *App Id* is a piece of string that we issue upon your request to uniquely identify you when calling API methods.
 
 ##How should I use the Application Id?
