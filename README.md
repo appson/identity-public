@@ -19,11 +19,8 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 3. [How can I verify the JWT token with public key?](#how-can-i-verify-the-jwt-token-with-public-key)
 3. [What is inside the token?](#what-is-inside-the-token)
 4. [How can I see inside the token?](#how-can-i-see-inside-the-token)
-
-
 ##What is AppsOn Identity?
 **AppsOn Identity** is an integrated authentication solution consisting of a series of APIs and SDKs  to help application developers provide safe and secure authentication to their end users.
-
 ##How can I use AppsOn Identity in my application?
 You can use **AppsOn Identity** in two ways.
 
@@ -32,10 +29,8 @@ You can use **AppsOn Identity** by directly calling API methods refer to the [do
 
 ###Using SDKs
 Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
-
 ##What is Application Id?
 *Application Id* or *App Id* is a piece of string that we issue upon your request to uniquely identify you when calling API methods.
-
 ##How should I use the Application Id?
 You must send us your *Application Id* with all API method calls. First of all, request an *Application Id* by sending an email to us if you don't have an *AppId* yet. 
 ###AppID in direct API method calls
