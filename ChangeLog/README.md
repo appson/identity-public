@@ -3,32 +3,54 @@ All notable changes to this project will be documented in this file.
 
 
 
-
-## [0.2.0] -2015-November-13 [**Latest Version**]
+# [0.5] -2017-April-19 [**Latest Version**]
+Significant architectural and performance improvments
 ### Added
 
-####API
+
+#### API
+ - API for setting profile info improved to allow email association
+
+ 
+#### WebSDK
+
+
+## [0.3.5] -2017-February 
+### Added
+
+#### API
+- API for setting profile picture
+
+ 
+#### WebSDK
+
+
+
+## [0.2.0] -2016-November-13 
+### Added
+
+#### API
  - API for getting public key with `appId`
  - APIs for signing up and logging in with Email/Password
  
-####WebSDK
+#### WebSDK
  - Ability to sign-up/login with email/password
  - Options object to specify popup's start point
 
 
 ## [0.1.0] - Not Released
 ### Added
-####API
+#### API
  - `AppId` is now needed for all API calls as a header `Appson-Identity-App-Id`. 
 
 
-####WebSDK
+#### WebSDK
  - Web SDK requires `appId` when added to page
  - Client-side token storage. (If token is valid, no popup is opened.
  - Options object to specify user's phone number
 
 
-####Android SDK
+#### Android SDK
 
  - In `AndroidManifest.xml`, the `AppId` must be passed as a parameter.
 
