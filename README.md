@@ -2,8 +2,13 @@
 Public specifications, samples and documentation on Appson's identity services. 
 
 > **Note:**
+> - Current live version is v0.5.
 
-> - Current live version is v0.5. Please refer to [API documentation](https://rawgit.com/appson/identity-public/master/v0.5/APISpecification/content/index.htm) for more info. 
+> **Quick Links:**
+> - [API documentation](https://rawgit.com/appson/identity-public/master/v0.5/APISpecification/content/index.htm)
+> - [Web SDK](https://github.com/appson/identity-public/tree/master/v0.5/WebSDK)
+> - Anroid SDK is being deployed on JCenter (check back soon)
+> -  iOS SDK is being deployed on Cocoapods (check back soon)
 
 
 
