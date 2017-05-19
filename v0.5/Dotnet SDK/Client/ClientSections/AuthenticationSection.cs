@@ -4,7 +4,7 @@ using Appson.Identity.Client.Model.Authentication;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class AuthenticationSection
+    public class AuthenticationSection : IAuthenticationSection
     {
 
         public PhoneAuthenticationSection WithPhoneNumber => new PhoneAuthenticationSection();

@@ -6,7 +6,7 @@ using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class EmailSection
+    public class EmailSection : IEmailSection
     {
         public async Task<SendEmailVerificationResponse> SendVerificationEmailAsync(string email)
         {

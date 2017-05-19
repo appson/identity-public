@@ -8,7 +8,7 @@ using ServiceStack;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class ApplicationSection
+    public class ApplicationSection : IApplicationSection
     {
         public async Task<ApplicationKeyResponse> GetPublicKeyAsync(string applicationId)
         {

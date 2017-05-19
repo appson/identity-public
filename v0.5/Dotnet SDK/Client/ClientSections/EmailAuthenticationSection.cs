@@ -5,7 +5,7 @@ using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class EmailAuthenticationSection
+    public class EmailAuthenticationSection : IEmailAuthenticationSection
     {
         public async Task<EmailAuthenticationResponse> AuthenticateAsync(string email,
             string password)

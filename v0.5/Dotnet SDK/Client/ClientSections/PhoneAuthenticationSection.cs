@@ -5,7 +5,7 @@ using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client.ClientSections
 {
-    public class PhoneAuthenticationSection
+    public class PhoneAuthenticationSection : IPhoneAuthenticationSection
     {
         public async Task<PhoneAuthenticationStartResponse> StartAsync(string phoneNumber,
             bool alreadyExists = false)
