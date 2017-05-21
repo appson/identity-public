@@ -7,11 +7,6 @@ namespace Client.Tests
     [TestClass]
     public class AuthenticationSectionTests : TestBase
     {
-        private async Task StartAuthWithPhone()
-        {
-            await Client.Authentication.WithPhoneNumber.StartAsync("<sample_phone>");
-        }
-
         [TestMethod]
         public async Task should_start_phone_authentication()
         {
