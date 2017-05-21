@@ -10,13 +10,14 @@ namespace Client.Tests
         [TestMethod]
         public void ClientInstancePropertiesAreSetCorrectly()
         {
-            var a = new IdentityClient("my-app-id", "https://accounts-staging.appson.ir");
+            const string appId = "<sample_app_id>";
+            const string serverAddress = "http://sample.server.tld";
 
-            Assert.IsNotNull(a);
-            Assert.IsTrue(a.Address.Equals("https://accounts-staging.appson.ir",
-                StringComparison.InvariantCultureIgnoreCase));
-            Assert.IsTrue(
-                a.ApplicationId.Equals("my-app-id", StringComparison.InvariantCultureIgnoreCase));
+            var client = new IdentityClient(appId, serverAddress);
+
+            Assert.IsNotNull(client);
+            Assert.IsTrue(client.Address.Equals(serverAddress, StringComparison.InvariantCultureIgnoreCase));
+            Assert.IsTrue(client.ApplicationId.Equals(appId, StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }
