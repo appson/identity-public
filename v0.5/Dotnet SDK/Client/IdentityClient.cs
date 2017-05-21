@@ -16,9 +16,9 @@ namespace Appson.Identity.Client
             Email = new EmailSection();
         }
 
-        public ApplicationSection Application { get; }
-        public AuthenticationSection Authentication { get; }
-        public EmailSection Email { get; }
+        public IApplicationSection Application { get; set; }
+        public IAuthenticationSection Authentication { get; set; }
+        public IEmailSection Email { get; set; }
         public string Address { get; }
         public string ApplicationId { get; }
     }

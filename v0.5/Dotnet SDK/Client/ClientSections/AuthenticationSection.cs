@@ -7,7 +7,7 @@ namespace Appson.Identity.Client.ClientSections
     public class AuthenticationSection : IAuthenticationSection
     {
 
-        public PhoneAuthenticationSection WithPhoneNumber => new PhoneAuthenticationSection();
-        public EmailAuthenticationSection WithEmail => new EmailAuthenticationSection();
+        public IPhoneAuthenticationSection WithPhoneNumber { get; set; } = new PhoneAuthenticationSection();
+        public IEmailAuthenticationSection WithEmail { get; set; } = new EmailAuthenticationSection();
     }
 }

@@ -2,7 +2,7 @@
 {
     public interface IAuthenticationSection
     {
-        EmailAuthenticationSection WithEmail { get; }
-        PhoneAuthenticationSection WithPhoneNumber { get; }
+        IEmailAuthenticationSection WithEmail { get; set; }
+        IPhoneAuthenticationSection WithPhoneNumber { get; set; }
     }
 }
