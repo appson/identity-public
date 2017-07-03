@@ -46,9 +46,9 @@ Currently *Web SDK* and *Android SDK* are implemented. You can easily use **Apps
 ## How should I use the Application Id?
 You must send us your *Application Id* with all API method calls. First of all, request an *Application Id* by sending an email to us if you don't have an *AppId* yet. 
 ### AppID in direct API method calls
-If you call the API methods directly and without using *WebSDK* or *Android SDK* then you have to send us the *Application Id* in your HTTP request's header. Header name is `Appson-Identity-App-Id` 
-### AppID in WebSDK
-If you are using WebSDK, the only thing you have to do is to append your *AppID* at the end of *JS* file location.:
+If you call the API methods directly and without using *Web SDK* or *Android SDK* then you have to send us the *Application Id* in your HTTP request's header. Header name is `Appson-Identity-App-Id` 
+### AppID in Web SDK
+If you are using Web SDK, the only thing you have to do is to append your *AppID* at the end of *JS* file location.:
 ```html
 <script src="https://accounts.appson.ir/libs/js/authentication/v/1?appId=MY_APP_ID">
 ```
