@@ -2,8 +2,20 @@
 All notable changes to this project will be documented in this file.
 
 
+# [0.6.2] -2017-June-14 [**Latest Version**]
+### Added
 
-# [0.5] -2017-April-19 [**Latest Version**]
+#### API
+ - APIs can be restricted based on caller's IP address
+ - APIs accept "language" URL Query String Parameter
+ - API for reading verification code to user
+ 
+ 
+#### WebSDK
+ - Ability to serve content in English in addition to Persian
+
+
+## [0.5] -2017-April-19 
 Significant architectural and performance improvments
 ### Added
 
