@@ -7,12 +7,13 @@ All notable changes to this project will be documented in this file.
 
 #### API
  - APIs can be restricted based on caller's IP address
- - APIs accept "language" URL Query String Parameter
+ - APIs accept "language" URL query string parameter
  - API for reading verification code to user
  
  
 #### WebSDK
  - Ability to serve content in English in addition to Persian
+ - Ability to call user to read verification code
 
 
 ## [0.5] -2017-April-19 
