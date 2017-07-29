@@ -2,7 +2,18 @@
 All notable changes to this project will be documented in this file.
 
 
-# [0.6.2] -2017-June-14 [**Latest Version**]
+
+# [0.6.3] -2017-July-29 [**Latest Version**]
+### Added
+Significant performance improvments
+
+#### API
+ 
+ 
+#### WebSDK
+
+
+## [0.6.2] -2017-June-14
 ### Added
 
 #### API
