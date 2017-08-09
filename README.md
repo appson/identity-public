@@ -2,7 +2,7 @@
 Public specifications, samples and documentation on Appson's identity services. 
 
 > **Note:**
-> - Current live version is v0.6.3
+> - Current live version is v0.6.4
 
 > **Quick Links:**
 > - [API documentation](https://rawgit.com/appson/identity-public/master/v0.6.2/APISpecification/content/index.htm)
