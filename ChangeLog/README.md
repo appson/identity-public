@@ -2,7 +2,18 @@
 All notable changes to this project will be documented in this file.
 
 
-# [0.6.4] -2017-August-9 [**Latest Version**]
+# [0.7.0] -2017-August-20 [**Latest Version**]
+### Added
+
+#### API
+ - API to authenticate user by Google's Id Token
+ 
+ 
+#### WebSDK
+ - Ability to login with Google Account
+ 
+
+## [0.6.4] -2017-August-9
 ### Added
 Significant security and performance improvements
 
@@ -38,6 +49,7 @@ Significant performance improvements
 
 ## [0.5] -2017-April-19 
 Significant architectural and performance improvements
+
 ### Added
 
 
@@ -58,13 +70,13 @@ Significant architectural and performance improvements
 #### WebSDK
 
 
-
 ## [0.2.0] -2016-November-13 
 ### Added
 
 #### API
  - API for getting public key with `appId`
  - APIs for signing up and logging in with Email/Password
+ 
  
 #### WebSDK
  - Ability to sign-up/login with email/password
@@ -84,10 +96,8 @@ Significant architectural and performance improvements
 
 
 #### Android SDK
-
  - In `AndroidManifest.xml`, the `AppId` must be passed as a parameter.
 
- 
 
 ## [0.1.0b] - 2016-October-01 to 2016-November-13
 Initial version. 
