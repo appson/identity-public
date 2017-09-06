@@ -1,8 +1,17 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
 
+# [0.7.1] -2017-September-6 [**Latest Version**]
+### Added
+ - Minor bug fixes
 
-# [0.7.0] -2017-August-20 [**Latest Version**]
+#### API
+ 
+ 
+#### WebSDK
+
+
+## [0.7.0] -2017-August-20 
 ### Added
 
 #### API
@@ -15,7 +24,7 @@ All notable changes to this project will be documented in this file.
 
 ## [0.6.4] -2017-August-9
 ### Added
-Significant security and performance improvements
+ - Significant security and performance improvements
 
 #### API
  
@@ -25,7 +34,7 @@ Significant security and performance improvements
 
 ## [0.6.3] -2017-July-29
 ### Added
-Significant performance improvements
+ - Significant performance improvements
 
 #### API
  
@@ -48,9 +57,8 @@ Significant performance improvements
 
 
 ## [0.5] -2017-April-19 
-Significant architectural and performance improvements
-
 ### Added
+- Significant architectural and performance improvements
 
 
 #### API
