@@ -1,7 +1,17 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
 
-# [0.7.1] -2017-September-6 [**Latest Version**]
+# [0.8.0] -2017-September-20 [**Latest Version**]
+### Added
+ - Users Migration Feature
+
+#### API
+ 
+ 
+#### WebSDK
+ - Forgot Password option	
+
+## [0.7.1] -2017-September-6
 ### Added
  - Minor bug fixes
 
