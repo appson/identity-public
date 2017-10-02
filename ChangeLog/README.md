@@ -1,7 +1,17 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
 
-# [0.8.0] -2017-September-20 [**Latest Version**]
+# [0.9.0] -2017-October-2 [**Latest Version**]
+### Added
+
+#### API
+ - API to get Account ID by Secure Phone Number
+ - API to get Secure Phone Number by Account ID
+ 
+#### WebSDK
+ 
+
+## [0.8.0] -2017-September-20
 ### Added
  - Users Migration Feature
 
