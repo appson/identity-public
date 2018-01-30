@@ -1,29 +1,25 @@
-﻿using Appson.Identity.Client.ClientSections;
+﻿using System.Net.Http;
+using Appson.Identity.Client.ClientSections;
 using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client
 {
     public class IdentityClient
     {
-        internal IdentityClient(IdentityClientConfiguration config)
+
+        public IdentityClient(HttpClient httpClient)
+            
         {
-            Configuration = config;
-            HttpHelper.Configure(config.ApplicationId, config.Address);
+            HttpHelper.Configure(httpClient);
             Application = new ApplicationSection();
             Authentication = new AuthenticationSection();
-            Account=new AccountSection();
+            Account = new AccountSection();
             Email = new EmailSection();
-        }
-
-        public IdentityClient(string applicationId, string address = "https://accounts.appson.ir")
-            : this(new IdentityClientConfiguration(applicationId, address))
-        {
         }
 
         public ApplicationSection Application { get; }
         public AuthenticationSection Authentication { get; }
         public EmailSection Email { get; }
         public AccountSection Account { get; set; }
-        public IdentityClientConfiguration Configuration { get; }
     }
 }

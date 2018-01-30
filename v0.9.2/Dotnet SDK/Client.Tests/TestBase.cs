@@ -1,4 +1,7 @@
-﻿using Appson.Identity.Client;
+﻿using System;
+using System.Net.Cache;
+using System.Net.Http;
+using Appson.Identity.Client;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Client.Tests
@@ -14,8 +17,13 @@ namespace Client.Tests
         [TestInitialize]
         public void Init()
         {
-            Client = new IdentityClient(AppId, ServerAddress);
-        }
+            var client = new HttpClient
+            {
+                BaseAddress = new Uri(ServerAddress)
+            };
 
+            client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", AppId);
+            Client = new IdentityClient(client);
+        }
     }
 }

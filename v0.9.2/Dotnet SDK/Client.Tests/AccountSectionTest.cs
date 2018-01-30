@@ -6,7 +6,7 @@ using Appson.Identity.Client.Model.Account;
 namespace Client.Tests
 {
     [TestClass]
-    public class AccountSectionTest : TestBase
+    public class AccountSectionTest :TestBase
     {
         [TestMethod]
         public async Task should_get_accountId_by_phoneNumber()
@@ -17,8 +17,6 @@ namespace Client.Tests
             GetAccountIdsResponse first = response.FirstOrDefault();
 
             Assert.IsTrue(first != null && first.IsValid);
-
-            Assert.IsFalse(string.IsNullOrEmpty(first.Result.AccountId));
         }
 
         [TestMethod]
