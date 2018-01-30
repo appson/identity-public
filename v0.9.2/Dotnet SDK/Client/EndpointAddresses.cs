@@ -13,5 +13,6 @@
         internal const string EmailCompleteResetPassword = "/api/email/resetpassword/complete";
         internal const string EmailVerifyEmailAddress = "/api/email/activate";
         internal const string EmailChangePassword = "/api/email/changepassword";
+        internal const string GetAccountIdsByPhoneNumber = "/api/account/id/get/byphonenumber";
     }
 }

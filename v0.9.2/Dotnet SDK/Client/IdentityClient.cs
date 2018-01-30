@@ -1,5 +1,4 @@
-﻿using System.Net.Http;
-using Appson.Identity.Client.ClientSections;
+﻿using Appson.Identity.Client.ClientSections;
 using Appson.Identity.Client.Util;
 
 namespace Appson.Identity.Client
@@ -12,6 +11,7 @@ namespace Appson.Identity.Client
             HttpHelper.Configure(config.ApplicationId, config.Address);
             Application = new ApplicationSection();
             Authentication = new AuthenticationSection();
+            Account=new AccountSection();
             Email = new EmailSection();
         }
 
@@ -23,6 +23,7 @@ namespace Appson.Identity.Client
         public ApplicationSection Application { get; }
         public AuthenticationSection Authentication { get; }
         public EmailSection Email { get; }
+        public AccountSection Account { get; set; }
         public IdentityClientConfiguration Configuration { get; }
     }
 }

@@ -76,10 +76,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientSections\AccountSection.cs" />
     <Compile Include="ClientSections\AuthenticationSection.cs" />
     <Compile Include="ClientSections\EmailAuthenticationSection.cs" />
     <Compile Include="ClientSections\EmailSection.cs" />
     <Compile Include="ClientSections\PhoneAuthenticationSection.cs" />
+    <Compile Include="Model\Account\GetAccountIdsInput.cs" />
+    <Compile Include="Model\Account\GetAccountIdsResponse.cs" />
     <Compile Include="Model\Email\SendEmailVerificationResponse.cs" />
     <Compile Include="Model\Email\SendVerificationEmailInput.cs" />
     <Compile Include="Util\HttpHelper.cs" />
@@ -103,7 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
