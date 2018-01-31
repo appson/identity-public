@@ -17,13 +17,7 @@ namespace Client.Tests
         [TestInitialize]
         public void Init()
         {
-            var client = new HttpClient
-            {
-                BaseAddress = new Uri(ServerAddress)
-            };
-
-            client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", AppId);
-            Client = new IdentityClient(client);
+            Client=new IdentityClient(ServerAddress,AppId);
         }
     }
 }

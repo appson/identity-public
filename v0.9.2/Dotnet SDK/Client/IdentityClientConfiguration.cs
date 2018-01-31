@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Appson.Identity.Client
+﻿namespace Appson.Identity.Client
 {
     public class IdentityClientConfiguration
     {

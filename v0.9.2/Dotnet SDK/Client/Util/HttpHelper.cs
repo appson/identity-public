@@ -6,14 +6,18 @@ namespace Appson.Identity.Client.Util
 {
     public static class HttpHelper
     {
-        private static  HttpClient Client { get; set; }
+        public static HttpClient Client { get; private set; }
 
-        public static void Configure(HttpClient httpClient)
+        public static void SetClient(HttpClient httpClient)
         {
             Client = httpClient;
         }
 
-
+        public static void SetClient(IdentityClientConfiguration identityClientConfiguration)
+        {
+            Client = new HttpClient { BaseAddress = new Uri(identityClientConfiguration.Address) };
+            Client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", identityClientConfiguration.ApplicationId);
+        }
 
         public static async Task<T> Post<T>(string endpoint, object dto)
         {

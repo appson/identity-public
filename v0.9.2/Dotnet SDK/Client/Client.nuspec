@@ -2,27 +2,27 @@
 <package >
   <metadata>
     <id>Appson.Identity.Client</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <title>Appson Identity - Client</title>
-    <summary>Commonly used components and contracts, built on Appson Composer</summary>
+    <summary>Appson Identity Utility Client</summary>
     <authors>appson</authors>
     <owners>appson</owners>
     <licenseUrl>https://github.com/appson/identity-public/tree/master/v0.9.2/Dotnet%20SDK/Client</licenseUrl>
     <projectUrl>https://github.com/appson/identity-public/tree/master/v0.9.2/Dotnet%20SDK/Client</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-      Appson Common libraries for .NET is a set of utilities and extensions that are 
+      Appson Identity libraries for .NET is a set of utilities and extensions that are
       used frequently in different projects.
     </description>
     <copyright>Copyright appson.tech 2018</copyright>
-    <tags>appson common components composer</tags>
+    <tags>appson identity utility</tags>
     <dependencies>
-      <dependency id="ServiceStack.Text" version="4.5.8"  />
-      <dependency id="System.Net.Http" version="4.3.1"  />
-      <dependency id="System.Net.Http.Formatting.Extension" version="5.2.3.0" />
-      <dependency id="System.Security.Cryptography.Algorithms" version="4.3.0" />
-      <dependency id="System.Security.Cryptography.Encoding" version="4.3.0" />
-      <dependency id="System.Security.Cryptography.Primitives" version="4.3.0" />
+      <dependency id="Newtonsoft.Json" version="10.0.3"  />
+      <dependency id="System.Net.Http" version="4.3.3" />
+      <dependency id="System.Net.Http.Formatting.Extension" version="5.2.3.0"  />
+      <dependency id="System.Security.Cryptography.Algorithms" version="4.3.0"  />
+      <dependency id="System.Security.Cryptography.Encoding" version="4.3.0"  />
+      <dependency id="System.Security.Cryptography.Primitives" version="4.3.0"  />
       <dependency id="System.Security.Cryptography.X509Certificates" version="4.3.0" />
     </dependencies>
   </metadata>

@@ -10,7 +10,6 @@ namespace Client.Tests
         [TestMethod]
         public void should_return_configured_client()
         {
-
             Assert.IsNotNull(Client);
         }
     }
