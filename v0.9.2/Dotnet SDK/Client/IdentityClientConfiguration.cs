@@ -5,7 +5,7 @@
         public string Address { get; }
         public string ApplicationId { get; }
 
-        internal IdentityClientConfiguration(string applicationId, string address)
+        internal IdentityClientConfiguration( string address, string applicationId)
         {
             ApplicationId = applicationId;
             Address = address;
