@@ -6,27 +6,18 @@ namespace Appson.Identity.Client.Util
 {
     public static class HttpHelper
     {
-        public static readonly HttpClient Client = new HttpClient();
+        public static HttpClient Client { get; private set; }
 
-        [Obsolete("Try using Configure(string applicationId, string address).",true)]
-        public static void Configure(IdentityClientConfiguration config)
+        public static void SetClient(HttpClient httpClient)
         {
-            Configure(config.ApplicationId,config.Address);
+            Client = httpClient;
         }
 
-        public static void Configure(string applicationId, string address)
+        public static void SetClient(IdentityClientConfiguration identityClientConfiguration)
         {
-            try
-            {
-                Client.BaseAddress = new Uri(address);
-            }
-            catch (Exception e)
-            {
-                throw new ArgumentException($"{address} is not a valid URI.");
-            }
-            Client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", applicationId);
+            Client = new HttpClient { BaseAddress = new Uri(identityClientConfiguration.Address) };
+            Client.DefaultRequestHeaders.Add("Appson-Identity-App-Id", identityClientConfiguration.ApplicationId);
         }
-
 
         public static async Task<T> Post<T>(string endpoint, object dto)
         {

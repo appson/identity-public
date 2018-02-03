@@ -1,10 +1,7 @@
-using System;
-using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Threading.Tasks;
 using Appson.Identity.Client.Model.Application.Key;
 using Appson.Identity.Client.Util;
-using ServiceStack;
+using System;
+using System.Threading.Tasks;
 
 namespace Appson.Identity.Client.ClientSections
 {
