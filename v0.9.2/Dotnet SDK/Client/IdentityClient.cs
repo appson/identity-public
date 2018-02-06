@@ -24,6 +24,11 @@ namespace Appson.Identity.Client
             HttpHelper.SetClient(new IdentityClientConfiguration(baseAddress, applicationId));
         }
 
+        public IdentityClient(string applicationId) : this(EndpointAddresses.BaseAddress, applicationId)
+        {
+            
+        }
+
         public ApplicationSection Application { get; }
         public AuthenticationSection Authentication { get; }
         public EmailSection Email { get; }
