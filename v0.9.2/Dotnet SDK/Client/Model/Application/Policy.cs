@@ -7,6 +7,6 @@ namespace Appson.Identity.Client.Model.Application
     {
         public string Version { get; set; }
         public ClientCertificate Certificate { get; set; }
-        public IList<IPAddress> ValidIps { get; set; }
+        public IList<string> ValidIps { get; set; }
     }
 }
