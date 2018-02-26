@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Appson.Identity.Client.Model.Authentication;
 using Appson.Identity.Client.Util;
@@ -17,7 +16,7 @@ namespace Appson.Identity.Client.ClientSections
                     await HttpHelper.Post<EmailAuthenticationResponse>(EndpointAddresses.AuthenticationEmail, req);
                 return response;
             }
-            catch (Exception e)
+            catch (System.Exception)
             {
                 return default(EmailAuthenticationResponse);
             }
