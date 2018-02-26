@@ -1,5 +1,9 @@
 using System;
+using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Appson.Common.General.Validation;
+using Appson.Identity.Client.Exceptions;
 using Appson.Identity.Client.Model.Application.GetApplicationPolicies;
 using Appson.Identity.Client.Model.Application.Key;
 using Appson.Identity.Client.Util;
@@ -24,18 +28,21 @@ namespace Appson.Identity.Client.ClientSections
 
         public async Task<GetApplicationPoliciesResponse> GetApplicationPoliciesAsync(string appId)
         {
-            try
-            {
-                var result =
-                    await HttpHelper.Get<GetApplicationPoliciesResponse>(
-                        string.Format(EndpointAddresses.GetApplicationPolicies, appId));
+            var apiResponse =
+                await HttpHelper.Client.GetAsync(
+                    string.Format(EndpointAddresses.GetApplicationPolicies, appId));
 
-                return result;
-            }
-            catch (Exception)
+            var result = await apiResponse.Content.ReadAsAsync<ApiValidatedResult<GetApplicationPoliciesResponse>>();
+
+            if (result == null)
+                throw new Exception();
+
+            if (!result.Success && result.Errors.Any() && result.Errors.Select(a => a.ErrorKey).Contains("INVALID_APP_ID"))
             {
-                return default(GetApplicationPoliciesResponse);
+                throw new InvalidAppIdException(result);
             }
+
+            return result.Result;
         }
     }
 }
