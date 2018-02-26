@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Appson.Identity.Client</id>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <title>Appson Identity - Client</title>
     <summary>Appson Identity Utility Client</summary>
     <authors>appson</authors>
