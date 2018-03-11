@@ -1,6 +1,18 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
-# [0.9.2] -2018-January-6 [**Latest Version**]
+# [0.10.1] -2018-March-11 [**Latest Version**]
+### Added
+- Server to Server Authentication
+- Minor bug fixes
+ 
+#### API
+- API to get Phone Number by Account ID
+- API to add Tenant
+- API to edit App
+ 
+#### WebSDK
+
+## [0.9.2] -2018-January-6
 ### Added
  - Minor bug fixes
  
