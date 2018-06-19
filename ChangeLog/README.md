@@ -2,10 +2,14 @@
 All notable changes to this project will be documented in this file.
 # [0.11.0] -2018-June-13 [**Latest Version**]
 ### Added
-- API to generate Access Token
+
 - Significant performance improvements
 - Minor bug fixes
- 
+
+ #### API
+- API to generate Access Token
+- API to get phone number/secure phone number by Account ID
+
 ## [0.10.1] -2018-March-11 
 ### Added
 - Server to Server Authentication
