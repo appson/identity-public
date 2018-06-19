@@ -1,6 +1,12 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
-# [0.10.1] -2018-March-11 [**Latest Version**]
+# [0.11.0] -2018-June-13 [**Latest Version**]
+### Added
+- API to generate Access Token
+- Significant performance improvements
+- Minor bug fixes
+ 
+## [0.10.1] -2018-March-11 
 ### Added
 - Server to Server Authentication
 - Minor bug fixes

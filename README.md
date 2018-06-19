@@ -2,12 +2,12 @@
 Public specifications, samples and documentation on Appson's identity services. 
 
 > **Note:**
-> - Current live version is v0.10.1
+> - Current live version is v0.11.0
 
 > **Quick Links:**
-> - [API documentation](https://rawgit.com/appson/identity-public/master/v0.10.1/APISpecification/content/index.htm)
-> - [Web SDK](https://github.com/appson/identity-public/tree/master/v0.10.1/WebSDK)
-> - [Dotnet SDK](https://github.com/appson/identity-public/tree/master/v0.10.1/Dotnet%20SDK)
+> - [API documentation](https://rawgit.com/appson/identity-public/master/v0.11.0/APISpecification/content/index.htm)
+> - [Web SDK](https://github.com/appson/identity-public/tree/master/v0.11.0/WebSDK)
+> - [Dotnet SDK](https://github.com/appson/identity-public/tree/master/v0.11.0/Dotnet%20SDK)
 > - Anroid SDK is being deployed on JCenter (check back soon)
 > -  iOS SDK is being deployed on Cocoapods (check back soon)
 
@@ -35,7 +35,7 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 You can use **AppsOn Identity** in two ways.
 
 ### Direct API Method calls
-You can use **AppsOn Identity** by directly calling API methods refer to the [documentation](https://rawgit.com/appson/identity-public/master/v0.10.1/APISpecification/content/index.htm) for more info.
+You can use **AppsOn Identity** by directly calling API methods refer to the [documentation](https://rawgit.com/appson/identity-public/master/v0.11.0/APISpecification/content/index.htm) for more info.
 
 ### Using SDKs
 Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
