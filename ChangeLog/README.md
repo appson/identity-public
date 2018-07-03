@@ -1,6 +1,12 @@
 # AppsOn Identity Change Log
 All notable changes to this project will be documented in this file.
-# [0.11.0] -2018-June-13 [**Latest Version**]
+# [0.11.1] -2018-July-03 [**Latest Version**]
+### Added
+- Minor bug fixes
+
+ #### API
+
+## [0.11.0] -2018-June-13 
 ### Added
 
 - Significant performance improvements
