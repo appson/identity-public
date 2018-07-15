@@ -2,18 +2,18 @@
 Public specifications, samples and documentation on Appson's identity services. 
 
 > **Note:**
-> - Current live version is v0.11.1
+> - Current live version is v0.11.2
 
 > **Quick Links:**
-> - [API documentation](https://rawgit.com/appson/identity-public/master/v0.11.1/APISpecification/content/index.htm)
-> - [Web SDK](https://github.com/appson/identity-public/tree/master/v0.11.1/WebSDK)
-> - [Dotnet SDK](https://github.com/appson/identity-public/tree/master/v0.11.1/Dotnet%20SDK)
+> - [API documentation](https://rawgit.com/appson/identity-public/master/v0.11.2/APISpecification/content/index.htm)
+> - [Web SDK](https://github.com/appson/identity-public/tree/master/v0.11.2/WebSDK)
+> - [Dotnet SDK](https://github.com/appson/identity-public/tree/master/v0.11.2/Dotnet%20SDK)
 > - Anroid SDK is being deployed on JCenter (check back soon)
 > -  iOS SDK is being deployed on Cocoapods (check back soon)
 
 
 
-If you'd like to use this product in your applications, contact danial [a t s i g n ] appson [d o t ] ir to get help on how to request an ApplicationID and use it in your applications.
+If you'd like to use this product in your applications, contact bahar [a t s i g n ] fanap [d o t ] plus to get help on how to request an ApplicationID and use it in your applications.
 
 # Table of Contents
 1. [What is AppsOn Identity?](#what-is-appson-identity)
@@ -35,7 +35,7 @@ If you'd like to use this product in your applications, contact danial [a t s i 
 You can use **AppsOn Identity** in two ways.
 
 ### Direct API Method calls
-You can use **AppsOn Identity** by directly calling API methods refer to the [documentation](https://rawgit.com/appson/identity-public/master/v0.11.1/APISpecification/content/index.htm) for more info.
+You can use **AppsOn Identity** by directly calling API methods refer to the [documentation](https://rawgit.com/appson/identity-public/master/v0.11.2/APISpecification/content/index.htm) for more info.
 
 ### Using SDKs
 Currently *Web SDK* and *Android SDK* are implemented. You can easily use **AppsOn Identity** in your Web and Android applications using these sdks. For more info, click on current version's folder in this github repository above and located the SDK's folder.
